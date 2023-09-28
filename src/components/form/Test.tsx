@@ -11,7 +11,7 @@ const Test = () => {
   const prevQuestion = () => {
     setCurrentQuestion(prev=>prev-1)
   }
-  const [answers, setAnswers] = useState({} as Record<string, boolean>)
+  const [answers, setAnswers] = useState<Record<string, boolean>[]>([]);
   console.log(answers);
   return (
     <div className="test">

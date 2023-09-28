@@ -1,10 +1,12 @@
-import React from 'react';
+import { useContext } from 'react';
 import Test from './components/form/Test';
-
+import { ResultContext } from './context/ResultProvider';
+import Result from './components/form/Result';
 function App() {
+  const {result} = useContext(ResultContext);
   return (
     <div className="App">
-      <Test />
+      {result ? <Result /> : <Test />}
     </div>
   );
 }

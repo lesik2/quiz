@@ -1,6 +1,7 @@
 import CustomButton from "../ui/CustomButton";
 import '../../styles/QuestionCart.css';
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ResultContext } from "../../context/ResultProvider";
 
 export interface IQuestionCart{
   question: string;
@@ -9,12 +10,11 @@ export interface IQuestionCart{
   prev: ()=>void;
   currentQuestion: number;
   questions: number;
-  setAnswers: React.Dispatch<React.SetStateAction<Record<string, boolean>>>;
-  answers: Record<string, boolean>;
+  setAnswers: React.Dispatch<React.SetStateAction<Record<string, boolean>[]>>;
+  answers: Record<string, boolean>[];
 }
 
 const QuestionCart = ({question, variants, next,prev,currentQuestion, questions, setAnswers, answers}:IQuestionCart) => {
-  const [answer, setAnswer]=useState('')
   const createView = () =>{
     const result = [];
     for(let i=0;i<questions;i++){
@@ -28,14 +28,44 @@ const QuestionCart = ({question, variants, next,prev,currentQuestion, questions,
   }
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     const target = event.currentTarget.innerText;
-    if(variants.includes(answer)){
-      setAnswers({...answers,[target]:true,[answer]:false})
+    if(handleRadioButton(target)){
+      setAnswers(answers.filter((item)=>!(target in item)))
     }else{
-      setAnswers({...answers,[target]:true})
+      const variant = checkPreviousClick();
+      if(variant!==''){
+        setAnswers([...answers.filter((item)=>!(variant in item)),{[target]:true}])
+      }else{
+        setAnswers([...answers,{[target]:true}])
+      }
     }
-
-    setAnswer(target);
   }
+  const checkPreviousClick = ()=>{
+    for(let i=0;i<variants.length;i++){
+      for(let j=0;j<answers.length;j++){
+        if(variants[i] in answers[j]){
+          return variants[i];
+        }
+      }
+    }
+    return '';
+  }
+  const handleRadioButton = (target:string)=>{
+    for(let i=0;i<answers.length;i++){
+      if(target in answers[i]){
+        return true;
+      }
+    }
+    return false;
+  }
+  const checkClickedButton=(variant:string)=>{
+    for(let i=0;i<answers.length;i++){
+      if(variant in answers[i]){
+        return true;
+      }
+    }
+    return false;
+  }
+  const {showResult} = useContext(ResultContext);
   return (
     <div className="question-cart">
       <div className="question-cart__current">
@@ -48,7 +78,7 @@ const QuestionCart = ({question, variants, next,prev,currentQuestion, questions,
         <h3 className="question-cart__question">{question}</h3>
         <ul className="question-cart-variants">
           {variants.map(variant=>(
-            <li onClick={handleClick} className={answers[variant]?"question-cart-variant clicked":"question-cart-variant"} key={variant}>{variant}</li>
+            <li onClick={handleClick} className={checkClickedButton(variant)?"question-cart-variant clicked":"question-cart-variant"} key={variant}>{variant}</li>
           ))}
         </ul>
       </div>
@@ -63,8 +93,8 @@ const QuestionCart = ({question, variants, next,prev,currentQuestion, questions,
         }
         <CustomButton 
           className="next"
-          text="Дальше"
-          handleClick={next}
+          text={currentQuestion+1===questions?"Узнать результат":"Дальше"}
+          handleClick={currentQuestion+1===questions?showResult:next}
         />
       </div>
     </div>
