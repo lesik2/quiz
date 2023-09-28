@@ -1,0 +1,22 @@
+.prev{
+  color: #000000;
+  background: #FFF;
+  
+}
+.next{
+  color: #FFFFFF;
+  background: #00A5FF;
+}
+.custom-button{
+  box-sizing: border-box;
+  padding: 7px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}

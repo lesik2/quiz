@@ -1,0 +1,25 @@
+.test{
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.test__title{
+  word-spacing: 3.9px;
+  margin: 0;
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 23px;
+}
+.test__description{
+  letter-spacing: 1.1px;
+  margin: 0;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 583px;
+  margin-bottom: 31px;
+}
