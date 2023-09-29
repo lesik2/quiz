@@ -12,7 +12,6 @@ const Test = () => {
     setCurrentQuestion(prev=>prev-1)
   }
   const [answers, setAnswers] = useState<Record<string, boolean>[]>([]);
-  console.log(answers);
   return (
     <div className="test">
       <h2 className="test__title">{'Онлайн-подбор средств для лица'}</h2>

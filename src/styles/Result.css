@@ -1,0 +1,41 @@
+.result{
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.result__title{
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 23px;
+}
+.result__description{
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 583px;
+  margin-bottom: 60px;
+  letter-spacing: 0.6px;
+}
+.result-carts{
+  display: grid;
+  column-gap: 35px;
+  row-gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 62px;
+}
+.result__pagination{
+  color: #B8B8B8;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  word-spacing: 7px;
+  margin-bottom: 56px;
+}
+.result__pagination::first-letter{
+  color: #00A5FF;
+}

@@ -1,0 +1,72 @@
+.item-cart{
+  width: 240px;
+  height: 342px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.item-cart__wrapper__img{
+  height: 240px;
+  width: 240px;
+  border-radius: 6.75px;
+  border: 1px solid #E9E9E9;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.item-cart__img{
+  height: 100%;
+}
+.item-cart__description{
+  width: 240px;
+  min-height: 40px;
+  margin-bottom: 13px;
+}
+.item-cart__description>p{
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  color: #000;
+  margin: 0;
+  letter-spacing: 0.6px;
+}
+.price-wrapper{
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+}
+.price-wrapper__old{
+  color: #B8B8B8;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.9%;
+  text-decoration-line:line-through;
+  margin: 0;
+  margin-bottom: 3px;
+}
+.price-wrapper__new{
+  color: #000;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.9%; 
+  margin: 0;
+}
+.price-wrapper-rubles{
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.9%;
+}
+.item-cart__like{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
