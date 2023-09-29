@@ -2,7 +2,7 @@
   padding: 50px;
 }
 .test__title{
-  word-spacing: 3.7px;
+  word-spacing: 5px;
   margin: 0;
   color: #000;
   font-size: 40px;
@@ -10,9 +10,9 @@
   font-weight: 700;
   line-height: normal;
   margin-bottom: 23px;
+  font-family: 'Inter';
 }
 .test__description{
-  letter-spacing: 0.8px;
   margin: 0;
   color: #000;
   font-size: 20px;
@@ -21,6 +21,7 @@
   line-height: normal;
   max-width: 583px;
   margin-bottom: 31px;
+  font-family: 'Inter';
 }
 @media screen and (max-width: 789px) {
   .test__title{

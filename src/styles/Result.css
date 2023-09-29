@@ -9,6 +9,8 @@
   line-height: normal;
   margin-bottom: 23px;
   margin-top: 0;
+  font-family: 'Inter';
+  letter-spacing: 0.5px;
 }
 .result__description{
   color: #000;
@@ -18,8 +20,8 @@
   line-height: normal;
   max-width: 583px;
   margin-bottom: 60px;
-  letter-spacing: 0.6px;
   margin-top: 0;
+  font-family: 'Inter';
 }
 .result-carts{
   display: grid;
@@ -36,6 +38,7 @@
   line-height: normal;
   word-spacing: 7px;
   margin: 0;
+  font-family: 'Inter';
 }
 .result__pagination::first-letter{
   color: #00A5FF;

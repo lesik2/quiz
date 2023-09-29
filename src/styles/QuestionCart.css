@@ -29,7 +29,7 @@
   font-weight: 400;
   line-height: normal;
   margin: 0;
-  letter-spacing: 0.3px;
+  font-family: 'Inter';
 }
 .question-cart__view{
   display: block;
@@ -52,6 +52,7 @@
   line-height: normal;
   margin: 0px 0px 25px 0px;
   letter-spacing: 0.3px;
+  font-family: 'Inter';
 }
 .question-cart-variants{
   list-style: none;
@@ -68,7 +69,7 @@
   font-weight: 400;
   line-height: normal;
   color: #000;
-  letter-spacing: 0.5px;
+  font-family: 'Inter';
 
 }
 .clicked.question-cart-variant::before{

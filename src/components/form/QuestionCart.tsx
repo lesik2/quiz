@@ -1,6 +1,6 @@
 import CustomButton from "../ui/CustomButton";
 import '../../styles/QuestionCart.css';
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { ResultContext } from "../../context/ResultProvider";
 
 export interface IQuestionCart{

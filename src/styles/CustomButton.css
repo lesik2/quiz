@@ -19,4 +19,6 @@
   border-radius: 5px;
   outline: none;
   border: none;
+  font-family: 'Inter';
+  cursor: pointer;
 }
