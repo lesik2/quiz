@@ -92,5 +92,15 @@
   position: absolute;
   bottom: 65px;
   left: 35px;
-
+}
+@media screen and (max-width: 500px) {
+  .question-cart__question{
+    font-size: 15px;
+  }
+  .question-cart{
+    padding: 34px 10px 65px 20px;
+  }
+  .question-cart__navigation{
+    left: 20px;
+  }
 }

@@ -1,6 +1,5 @@
 .test{
-  padding-left: 50px;
-  padding-top: 50px;
+  padding: 50px;
 }
 .test__title{
   word-spacing: 3.9px;
@@ -22,4 +21,35 @@
   line-height: normal;
   max-width: 583px;
   margin-bottom: 31px;
+}
+@media screen and (max-width: 789px) {
+  .test__title{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 647px) {
+  .test__title{
+    font-size: 25px;
+  }
+  .test__description{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 549px) {
+  .test{
+    padding: 50px 20px 50px 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .test__title{
+    text-align: center;
+  }
+  .test__description{
+    text-align: center;
+  }
+}
+@media screen and (max-width: 341px) {
+  .test__description{
+    font-size: 14px;
+  }
 }
