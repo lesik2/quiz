@@ -1,6 +1,5 @@
 .result{
-  padding-left: 50px;
-  padding-top: 50px;
+  padding: 50px 50px 56px 50px;
 }
 .result__title{
   color: #000;
@@ -16,7 +15,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 583px;
+  max-width: 583px;
   margin-bottom: 60px;
   letter-spacing: 0.6px;
 }
@@ -34,8 +33,21 @@
   font-weight: 400;
   line-height: normal;
   word-spacing: 7px;
-  margin-bottom: 56px;
 }
 .result__pagination::first-letter{
   color: #00A5FF;
+}
+@media screen and (max-width: 615px) {
+  .result__title{
+    text-align: center
+  }
+  .result__description{
+    text-align: center;
+  }
+  .result-carts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

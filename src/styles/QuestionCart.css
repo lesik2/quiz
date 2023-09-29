@@ -68,7 +68,7 @@
   font-weight: 400;
   line-height: normal;
   color: #000;
-  letter-spacing: 0.9px;
+  letter-spacing: 0.5px;
 
 }
 .clicked.question-cart-variant::before{
